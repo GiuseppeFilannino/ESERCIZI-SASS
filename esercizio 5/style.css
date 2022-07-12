@@ -1,0 +1,112 @@
+.container, body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  height: 100vh;
+}
+
+.container {
+  height: 700px;
+  flex-direction: column;
+}
+
+.color1 {
+  background-color: "DB9B37";
+  border: 1px solid black;
+  width: 50em;
+  height: 4em;
+  display: inline-block;
+}
+
+.color2 {
+  background-color: "32DDD9";
+  border: 1px solid black;
+  width: 50em;
+  height: 4em;
+  display: inline-block;
+}
+
+.color3 {
+  background-color: "245B8B";
+  border: 1px solid black;
+  width: 50em;
+  height: 4em;
+  display: inline-block;
+}
+
+.color4 {
+  background-color: "1EA774";
+  border: 1px solid black;
+  width: 50em;
+  height: 4em;
+  display: inline-block;
+}
+
+.color5 {
+  background-color: "ADF599";
+  border: 1px solid black;
+  width: 50em;
+  height: 4em;
+  display: inline-block;
+}
+
+.color6 {
+  background-color: "361D77";
+  border: 1px solid black;
+  width: 50em;
+  height: 4em;
+  display: inline-block;
+}
+
+.color7 {
+  background-color: "A762A7";
+  border: 1px solid black;
+  width: 50em;
+  height: 4em;
+  display: inline-block;
+}
+
+.color8 {
+  background-color: "FC3BCB";
+  border: 1px solid black;
+  width: 50em;
+  height: 4em;
+  display: inline-block;
+}
+
+.color9 {
+  background-color: "4F0199";
+  border: 1px solid black;
+  width: 50em;
+  height: 4em;
+  display: inline-block;
+}
+
+.color10 {
+  background-color: "3EFE76";
+  border: 1px solid black;
+  width: 50em;
+  height: 4em;
+  display: inline-block;
+}
+
+.color11 {
+  background-color: "533F9E";
+  border: 1px solid black;
+  width: 50em;
+  height: 4em;
+  display: inline-block;
+}
+
+.color12 {
+  background-color: "D57636";
+  border: 1px solid black;
+  width: 50em;
+  height: 4em;
+  display: inline-block;
+}
+
+/*# sourceMappingURL=style.css.map */

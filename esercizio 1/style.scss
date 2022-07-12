@@ -1,0 +1,64 @@
+$color-primary: red;
+$color-secondary: blue;
+$color-therziary: green;
+
+@mixin flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    @include flexcenter();
+
+    div {
+        @include flexcenter();
+
+        flex-direction: column;
+        width: 95vw;
+        height: 30vh;
+        border: 1px solid $color-primary;
+
+
+        h1 {
+
+            color: $color-therziary;
+            text-decoration: $color-secondary underline;
+        }
+    }
+
+    section {
+        @include flexcenter();
+        margin-left: 20px;
+        margin-right: 20px;
+
+        article {
+            height: 120px;
+            @include flexcenter();
+            text-align: center;
+            border: 1px solid $color-therziary;
+
+            p {
+                @include flexcenter();
+                height: 7rem;
+                margin-left: 20px;
+                margin-right: 20px;
+
+
+
+            }
+
+        }
+    }
+
+    .blue {
+        color: $color-secondary
+    }
+
+    .red {
+        color: $color-primary
+    }
+}

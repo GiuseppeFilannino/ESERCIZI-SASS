@@ -1,0 +1,147 @@
+$color-primary: red;
+$color-secondary: blue;
+$color-therziary: green;
+
+
+@function toRem($value) {
+    $remValue: calc($value / 16)+rem;
+    @return $remValue;
+
+}
+
+@mixin article($color, $bcolor, $fontsize) {
+    color: $color ;
+    border: 1px solid $bcolor ;
+    font-size: $fontsize;
+
+}
+
+@mixin flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+body {
+
+    height: 100vh;
+    width: 100vw;
+    @include flexcenter();
+
+    .mainbox {
+        @include flexcenter();
+
+        flex-direction: column;
+        width: 95vw;
+        height: 62vh;
+        border: 2px solid $color-primary;
+
+
+        h1 {
+
+            color: $color-therziary;
+            text-decoration: $color-secondary underline;
+        }
+
+        h2 {
+            padding: 10px;
+            color: $color-therziary;
+            border: $color-primary 2px solid;
+        }
+    }
+
+    section {
+        @include flexcenter();
+        margin-left: 20px;
+        margin-right: 20px;
+
+        article {
+
+            height: 120px;
+            @include flexcenter();
+            text-align: center;
+
+            p {
+                @include flexcenter();
+                height: 7rem;
+                margin-left: 20px;
+                margin-right: 50px;
+
+
+
+            }
+
+        }
+    }
+
+    .footer {
+        @include article(green, blue, 24px);
+        margin: 20px;
+        width: 92.3vw;
+        text-align: center;
+        
+    }
+
+    .blue {
+        @include article(blue, green, 1rem);
+    }
+
+    .red {
+        @include article(red, green, 1rem);
+    }
+}
+
+.numbers {
+    @include flexcenter();
+    height: 1000px;
+    width: 92.3vw;
+    gap: 30px;
+    margin-top: 15px;
+
+
+}
+
+.fs-1rem,
+.fs-2rem,
+.fs-3rem {
+ 
+ 
+    border: 1px solid $color-primary;
+ 
+    height: toRem(45);
+    width: toRem(45);
+}
+
+$sizes: 1rem, 2rem, 3rem;
+
+@each $size in $sizes {
+    .fs-#{$size} {
+        font-size: $size;
+    }
+
+}
+
+$base-color1: #ffffff;
+$base-color2: black;
+
+
+@for $i from 1 through 19 {
+    #box:nth-child(0n + #{$i}) {
+        background-color: darken($base-color1, $i * 5%);
+        color: lighten($base-color2, $i * 5%);
+
+
+   
+
+    @if $i ==10 {
+        background-color: blue;
+        color: $color-primary;
+        
+
+    }
+ }
+
+}
+
+

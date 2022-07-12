@@ -1,0 +1,79 @@
+@use 'variable';
+@use 'function';
+
+@mixin article($color, $bcolor) {
+    color: $color ;
+    border:1px solid $bcolor ;
+
+}
+
+@mixin flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    @include flexcenter();
+
+    div {
+        @include flexcenter();
+
+        flex-direction: column;
+        width: 95vw;
+        height: 50vh;
+        border: 1px solid variable.$color-primary;
+
+
+        h1 {
+
+            color: variable.$color-therziary;
+            text-decoration: variable.$color-secondary underline;
+        }
+    }
+
+    section {
+        @include flexcenter();
+        margin-left: 20px;
+        margin-right: 20px;
+
+        article {
+
+            height: 120px;
+            @include flexcenter();
+            text-align: center;
+
+            p {
+                @include flexcenter();
+                height: 7rem;
+                margin-left: 20px;
+                margin-right: 20px;
+
+
+
+            }
+
+        }
+    }
+
+    .footer {
+        @include article(green, blue);
+        margin: 20px;
+        width: 92.3vw;
+        font-size: function.toRem(24);
+
+    }
+
+    .blue {
+        @include article(blue, green);
+        font-size: 1rem;
+    }
+
+    .red {
+        @include article(red, green);
+        font-size: 1rem;
+    }
+}
