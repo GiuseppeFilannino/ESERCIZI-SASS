@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+}
+
+button {
+    padding: 20px 25px;
+    background-color: red;
+}
+
+.bouncecont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10rem;
+
+}
+
+
+
+
+
+@mixin animation($partenza,$distanza) {
+    @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100%{
+            transform: translateY($partenza);
+        }
+        40%{
+            transform: translateY($distanza);
+        }
+        60%{
+            transform: translateY($distanza/2);}
+
+
+
+        
+    }
+    
+}
+    .bounce {
+        animation-duration: 1s;
+        animation-name: bounce;
+        animation-iteration-count: infinite;
+       @include animation(0,-30px );
+    }
